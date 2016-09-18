@@ -1,0 +1,123 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>testio</title>
+      <meta name="description" content="Test Your Front-End Dev’s Skills and Experience">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style/style.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin-ext" rel="stylesheet">
+      <script type="text/javascript" src="scripts/jquery-3.1.0.min.js" ></script>
+      <script type="text/javascript" src="scripts/functions.js" ></script>
+      <script type="text/javascript" src="scripts/main-script.js" ></script>
+  </head>
+
+  <body>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/lt_LT/sdk.js#xfbml=1&version=v2.7&appId=823907630959964";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <header>
+          <div class="logo-white"><a href="#top"><img alt="logo" src="images/logo-white.png"/></a></div>
+          <div class="logo-black"><a href="#top"><img alt="logo" src="images/logo-black.png"/></a></div>
+          <nav id="navigation">
+              <div id="responsive-close">
+                  <img alt="menu" src="images/close.png">
+              </div>
+              <div class="navigation-list">
+                <ul>
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="#pricing">Pricing</a></li>
+                  <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div></li>
+                </ul>
+              </div>
+          </nav>
+          <div id="responsive-menu">
+              <img class="menu-white" alt="menu" src="images/menu.png">
+              <img class="menu-black" alt="menu-black" src="images/menu-b.png">
+          </div>
+      </header>
+
+      <div id="main">
+        <div id="top"></div>
+        <div class="index-top">
+            <div class="content">
+              <div class="index-top-text">
+                <h1>Test Your Front-End Dev’s Skills &amp; Experience</h1>
+                <h4>Hiring a Front-End Developer? Get to know his capabilities with a simple Testio task.</h4>
+                <button id="header-button">Check pricing</button>
+              </div>
+              <div class="index-top-image">
+                  <img class="index-top-image-phone" alt="mobile" src="images/mobile-phone.png">
+                  <span class="seperator"></span>
+                  <img class="index-top-image-shadow" alt="mobile" src="images/mobile-shadow.png">
+              </div>
+              <div class="clear"></div>
+              <div class="arrow" id="header-arrow"></div>
+            </div>
+        </div>
+
+        <div class="index-features" id="features">
+            <div class="content">
+                <h1>Features</h1>
+                <p>We Bring You The Best Solution On The Market</p>
+                <div class="index-features-blocks">
+                  <div class="index-features-block odd">
+                      <img alt="feature-1" src="images/feature1.png">
+                      <h5>Great Speed</h5>
+                      <p>Vestibulum consequat metus sed dictum sagittis. Fusce at luctus libero, vel mollis velit. Nunc elementum velit justo, lobortis facilisis orci congua.</p>
+                  </div>
+                  <div class="index-features-block even">
+                      <img alt="feature-1" src="images/feature2.png">
+                      <h5>Unlimited Projects</h5>
+                      <p>Donec mollis nisi vel lorem laoreet, eget venenatis lorem sagittis. Praesent ullamcorper odio id gravida semper. Vivamus a fermentum neque, id pretium diam. </p>
+                  </div>
+                  <div class="index-features-block odd">
+                      <img alt="feature-1" src="images/feature3.png">
+                      <h5>Recording Videos</h5>
+                      <p>Ut interdum interdum placerat. Phasellus ultrices iaculis metus, a congue ex cursus eget. Nullam at sem ullamcorper, condimentum lectus sit amet, luctus elit. </p>
+                  </div>
+                  <div class="index-features-block even">
+                      <img alt="feature-1" src="images/feature4.png">
+                      <h5>Circular Motion</h5>
+                      <p>Duis tempor eros augue, efficitur tempor ipsum maximus sed. Donec est est, auctor elementum leo a, euismod molestie purus. Proin eget magna non mi vestibulum.</p>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-pricing" id="pricing">
+            <div class="content">
+                <h1>Pricing</h1>
+                <h3>Pick a Plan</h3>
+                <div class="index-pricing-blocks">
+                    <div class="index-pricing-block p-block-1">
+                        <img alt="paper-plane" src="images/paper-plane.png">
+                        <div><span class="big">$99</span>/m</div>
+                        <p>Monthly</p>
+                        <button>Try now</button>
+                    </div><div class="index-pricing-block p-block-2">
+                        <img alt="air-plane" src="images/air-plane.png">
+                        <div><span class="big">$30</span>/m</div>
+                        <p><span class="cred">$1188</span> $360 Billed Anually</p>
+                        <button>Try now</button>
+                    </div>
+                </div>
+                <div class="index-pricing-footer">
+                  <img alt="infinty" src="images/infinity.png"><span class="seperator"></span>No limits for bandwidth, speed, traffic, connections.</div>
+            </div>
+        </div>
+
+      </div>
+
+      <footer>
+        <div class="copyrights">Copyright © 2016 <span class="black">Testio</span>. All Rights Reserved.</div>
+        <div class="company"><a href="#top">Explore Testio.</a></div>
+      </footer>
+  </body>
+</html>

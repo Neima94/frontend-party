@@ -1,0 +1,384 @@
+//CSS reset style
+
+@import 'reset';
+
+//Variables and functions
+
+$base-width: 1440px;
+$content-width: 1060px;
+
+$base-color: #fff;
+$text-color: #999999;
+$shadow-color: #000;
+$second-text-color: #fff;
+$third-text-color: #333;
+$hover-text-color: #9fd533;
+$button-color: #9fd533;
+$hover-button-color: #afeb38;
+$warning-color: #ff6666;
+$responsive-menu-color: #080f30;
+
+$main-font: 'Roboto', sans-serif;
+
+$default-transition-speed: 0.5s;
+
+@mixin transision-all($time){
+  -webkit-transition: all $time ease;
+     -moz-transition: all $time ease;
+       -o-transition: all $time ease;
+          transition: all $time ease;
+}
+
+//General website style
+
+body{
+  background-color: $base-color;
+  //max-width: $base-width;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  color: $text-color;
+  font-family: $main-font;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+a{
+  color: $text-color;
+  text-decoration: none;
+  @include transision-all($default-transition-speed);
+}
+
+a:hover{
+  color: $hover-text-color;
+}
+
+a:focus{
+  color: $hover-text-color;
+}
+
+p{
+  margin-bottom: 15px;
+}
+
+h1{
+  color: $third-text-color;
+  margin-bottom: 25px;
+  font-size: 54px;
+}
+
+h3{
+  color: $third-text-color;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+h4{
+  color: $third-text-color;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+h5{
+  color: $third-text-color;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.big{
+  font-size: 36px;
+}
+
+.cred{
+  color: $warning-color;
+  text-decoration: line-through;;
+}
+
+.black{
+  color: $third-text-color;
+}
+
+button{
+  background-color: $hover-button-color;
+  font-weight: 700;
+  padding: 20px 30px;
+  border-radius: 100%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $second-text-color;
+  text-transform: uppercase;
+  @include transision-all($default-transition-speed);
+}
+
+button:hover{
+  background-color: $button-color
+}
+
+.arrow{
+  background-color: $base-color;
+  width: 55px;
+  height: 55px;
+  float: left;
+  margin-top: -100px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 20px -5px $shadow-color;
+	   -moz-box-shadow: 0px 0px 20px -5px $shadow-color;
+          box-shadow: 0px 0px 20px -5px $shadow-color;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+  @include transision-all(0.5s);
+}
+
+.arrow:hover{
+  background-image: url(../images/arrow-h.png);
+}
+
+.content{
+  max-width: $content-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.clear{
+  clear: both;
+}
+
+//Header style
+
+header{
+  height: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $second-text-color;
+  padding: 30px 50px 0 50px;
+  z-index: 1;
+  @include transision-all(0.5s);
+}
+
+header.stick{
+  background-color: $base-color;
+  position: fixed;
+  height: 63px;
+  padding: 15px 15px 0 15px;
+}
+
+header.stick .logo-white,  header.stick .menu-white{
+  display: none;
+}
+
+header.stick .logo-black, header.stick .menu-black{
+  display: block;
+}
+
+header{
+   a{
+      color: $second-text-color;
+   }
+
+   nav{
+     float: right;
+     font-size: 16px;
+   }
+}
+
+#responsive-menu, #responsive-close{
+  float: right;
+  display: none;
+  cursor: pointer;
+}
+
+.menu-black{
+  display: none;;
+}
+
+
+.fb-like{
+  overflow: hidden;
+  margin-bottom: -5px;
+}
+
+header nav ul li{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.logo-white, .logo-black{
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-black{
+  display: none;
+}
+
+//Index page style
+
+.index-top{
+  background-image: url('../images/header-background.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  height: 790px;
+  padding-top: 110px;
+  color: $second-text-color;
+  overflow: hidden;
+}
+
+.index-top{
+  h1{
+    color: $second-text-color;
+  }
+
+  h4{
+    color: $second-text-color;
+    margin-bottom: 40px;
+  }
+
+  .content{
+    position: relative;
+  }
+
+  .arrow{
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+  }
+}
+
+.index-top-text, .index-top-image{
+  float: left;
+}
+
+.index-top-text{
+  width: 60%;
+  padding-top: 110px;
+}
+
+.index-top-image{
+  width: 40%;
+  text-align: right;
+  padding-top: 30px
+}
+
+.index-top-image-phone{
+  @include transision-all($default-transition-speed);
+  max-width: 100%;
+}
+
+.index-top-image-phone:hover{
+  margin-top: -20px;
+  -webkit-transform: rotate(20deg);
+     -moz-transform: rotate(20deg);
+       -o-transform: rotate(20deg);
+          transform: rotate(20deg);
+          margin-bottom: 20px;
+}
+
+.index-top-image-shadow{
+  margin-top: -23px;
+  margin-right: -20px;
+  max-width: 100%;
+}
+
+.index-features{
+  text-align: center;
+  padding-top: 80px;
+}
+
+.index-features-blocks{
+  padding-top: 0px;
+  padding-bottom: 120px;
+}
+
+.index-features-block{
+  padding-top: 50px;
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+
+.index-features-block img{
+  margin-bottom: 25px;
+  width: 60px;
+  height: auto;
+}
+
+.index-features-block.odd{
+  padding-right: 80px;
+}
+
+.index-features-block.even{
+  padding-left: 80px;
+}
+
+.index-pricing{
+  text-align: center;
+  background-image: url('../images/pricing-background.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+  color: $second-text-color;
+  padding: 110px 0px;
+}
+
+.index-pricing h1, .index-pricing h3{
+  color: $second-text-color;
+}
+
+.index-pricing-block{
+  display: inline-block;
+  width: 25%;
+  border: solid 2px rgba(255,255,255,0.25);
+  height: 325px;
+  margin: 25px 10px;
+  padding-top: 60px;
+}
+
+.index-pricing-block.p-block-2{
+    background-color: $base-color;
+    color: $text-color;
+}
+
+.index-pricing-block img{
+  margin-bottom: 20px;
+  width: 60px;
+  height: auto;
+}
+
+.index-pricing-footer{
+  padding-top: 30px;
+}
+
+.index-pricing-footer img{
+  margin-right: 20px;
+  width: 35px;
+  height: auto;
+}
+
+
+//Footer style
+footer{
+  height: 125px;
+  padding: 55px 50px 0 50px;
+}
+
+.copyrights{
+  float: left;
+}
+
+.company{
+  float: right;
+}
+
+//Responsive design style
+
+@import 'responsive';
